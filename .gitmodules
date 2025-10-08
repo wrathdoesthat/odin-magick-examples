@@ -1,0 +1,3 @@
+[submodule "odin-magick"]
+	path = odin-magick
+	url = https://github.com/wrathdoesthat/odin-magick
