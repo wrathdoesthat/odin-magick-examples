@@ -32,10 +32,12 @@ main :: proc() {
         image := mgk.ReadImage(image_info, exc)
         mgkh.handle_exception(exc)
 
-        image = mgk.ResizeImage(image, 500, 500, .MitchellFilter, exc)
+        resized := mgk.ResizeImage(image, 500, 500, .MitchellFilter, exc)
         mgkh.handle_exception(exc)
 
-        images[num_images] = image
+        mgk.DestroyImage(image)
+
+        images[num_images] = resized
         
         num_images += 1
         if num_images == 9 do break
