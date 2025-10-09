@@ -18,7 +18,7 @@ main :: proc() {
     resize_filters := reflect.enum_fields_zipped(mgk.FilterType)
 
     // Remove Undefined/Sentinel filter
-    resize_filters = resize_filters[1:len(resize_filters) - 1]
+    resize_filters = resize_filters[1 : len(resize_filters) - 1]
     
     image_info := mgk.AcquireImageInfo()
     defer mgk.DestroyImageInfo(image_info)
